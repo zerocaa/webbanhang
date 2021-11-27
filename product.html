@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <script type="module" src="/@vite/client"></script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document123</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/build/app.css" />
+    <link rel="stylesheet" href="/build/style.css" />
+    <link rel="stylesheet" href="/build/tailwind.css" />
+    <link rel="stylesheet" href="/themify-icons/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    
+    <!--tesst  -->
+  </head>
+
+  <body style="background: #edf2f7;">
+<div class="container" >
+      <!--HEADer -->
+      <div class="navbar navbar" >
+        <div class="max-w-full px-4 sm:px-6 ">
+          <div
+            class="fix
+              flex  
+              border-b-2 border-gray-100
+              py-6
+              md:justify-start md:space-x-10
+              
+            "
+          >
+            <div class="flex justify-start lg:w-80px lg:flex">
+              <img
+                class="h-12 w-14 sm:h-14 rounded-full"
+                src="https://images.unsplash.com/photo-1631795822849-e30bd7bde9e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=376&q=80"
+                alt=""
+              />
+            </div>
+            <div class="-mr-1 -my-1 md:hidden">
+            </div>
+            <nav class="main-nav hidden md:flex space-x-10">
+              <div class="relative">
+                <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                 
+                <button
+                  type="button"
+                  class="
+                   link-container
+                  "
+                  aria-expanded="false"
+                >
+                  <a class="link-two link-container text-xl font-bold">Trang Chủ</a>
+                </button>
+                <div
+                  class="
+                    absolute
+                    z-10
+                    -ml-4
+                    mt-3
+                    transform
+                    px-2
+                    w-screen
+                    max-w-md
+                    sm:px-0
+                    lg:ml-0 lg:left-1/2 lg:-translate-x-1/2
+                  "
+                >
+                  <div
+                    class="
+                      rounded-lg
+                      shadow-lg
+                      ring-1 ring-black ring-opacity-5
+                      overflow-hidden
+                    "
+                  ></div>
+                </div>
+              </div>
+
+              <a
+                href="#"
+                class="link-container link-three link-container  text-xl font-bold "
+              >
+               Danh sách sản phẩm của chúng tôi
+              </a>
+              <a
+                href="#"
+                class="link-container link-two link-container  text-xl font-bold"
+              >
+                Thông tin
+              </a>
+
+              <a
+                href="#"
+                class="link-container link-three link-container  text-xl font-bold"
+              >
+               Liên hệ
+              </a>
+              
+  <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="mt-5">
+          <span class="link-two link-container  text-xl font-bold">Quản lí </span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-56">
+          <div class="px-2 py-2 bg-gray-200 rounded-md shadow">
+            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="user.html">Tài khoản khách hàng</a>
+            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div> 
+             
+            </nav>
+            <div  
+              class="form-login hidden md:flex items-center justify-end md:flex-1 lg:max-w-xl  ml-32"
+            >
+              <a
+                href="#"
+                class="
+                  whitespace-nowrap
+                  text-base
+                  font-medium
+                  text-white
+                  hover:text- 
+                  bg-blue-600
+                  px-4
+                  py-3
+                  rounded xl:
+                "
+              >
+                Sign in
+              </a>
+              <a
+                href="#"
+                class="
+                  ml-8
+                  whitespace-nowrap
+                  inline-flex
+                  items-center
+                  justify-center
+                  px-4
+                  py-2
+                  border border-transparent
+                  rounded-md
+                  shadow-sm
+                  text-base
+                  font-medium
+                  text-white
+                  bg-indigo-600
+                  hover:bg-indigo-700
+                "
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- product -->
+        <div class="product">
+          <div class="bg-white">
+            <div class="pt-5">
+
+                <div class="image grid grid-cols-2">
+                    <div class="owl-carousel owl-theme p-1 w-4/12" style="width:100%;">
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                        <div class="item">
+        <div class="card-wrapper">
+             <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="Two each of gray, white, and black shirts laying flat." class="w-2/6 h-2/5 object-center object-cover">        
+        </div>
+        </div>
+       
+        
+                        </div>
+                     </div>  
+                <div class="mt-4 ml-5 lg:mt-0 lg:row-span-3">
+        <h2 class="sr-only">Product information</h2>
+        <p class="text-3xl text-gray-900">$192</p>
+
+        <!-- Reviews -->
+        <div class="mt-6">
+          <h3 class="sr-only">Reviews</h3>
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <!--
+                Heroicon name: solid/star
+
+                Active: "text-gray-900", Default: "text-gray-200"
+              -->
+              <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+              <!-- Heroicon name: solid/star -->
+              <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+              <!-- Heroicon name: solid/star -->
+              <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+              <!-- Heroicon name: solid/star -->
+              <svg class="text-gray-900 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+
+              <!-- Heroicon name: solid/star -->
+              <svg class="text-gray-200 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <p class="sr-only">4 out of 5 stars</p>
+            <a href="#" class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">117 reviews</a>
+          </div>
+        </div>
+
+        <form class="mt-10">
+          <!-- Colors -->
+          <div>
+            <h3 class="text-sm text-gray-900 font-medium">Color</h3>
+
+            <fieldset class="mt-4">
+              <legend class="sr-only">
+                Choose a color
+              </legend>
+              <div class="flex items-center space-x-3">
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                  <input type="radio" name="color-choice" value="White" class="sr-only" aria-labelledby="color-choice-0-label">
+                  <p id="color-choice-0-label" class="sr-only">
+                    White
+                  </p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-white border border-black border-opacity-10 rounded-full"></span>
+                </label>
+
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                  <input type="radio" name="color-choice" value="Gray" class="sr-only" aria-labelledby="color-choice-1-label">
+                  <p id="color-choice-1-label" class="sr-only">
+                    Gray
+                  </p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-gray-200 border border-black border-opacity-10 rounded-full"></span>
+                </label>
+
+                <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
+                  <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-2-label">
+                  <p id="color-choice-2-label" class="sr-only">
+                    Black
+                  </p>
+                  <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Sizes -->
+          <div class="mt-10">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm text-gray-900 font-medium">Size</h3>
+              <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Size guide</a>
+            </div>
+
+            <fieldset class="mt-4">
+              <legend class="sr-only">
+                Choose a size
+              </legend>
+              <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed">
+                  <input type="radio" name="size-choice" value="XXS" disabled class="sr-only" aria-labelledby="size-choice-0-label">
+                  <p id="size-choice-0-label">
+                    XXS
+                  </p>
+
+                  <div aria-hidden="true" class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
+                    <svg class="absolute inset-0 w-full h-full text-gray-200 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                      <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke" />
+                    </svg>
+                  </div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="XS" class="sr-only" aria-labelledby="size-choice-1-label">
+                  <p id="size-choice-1-label">
+                    XS
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="S" class="sr-only" aria-labelledby="size-choice-2-label">
+                  <p id="size-choice-2-label">
+                    S
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="M" class="sr-only" aria-labelledby="size-choice-3-label">
+                  <p id="size-choice-3-label">
+                    M
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="L" class="sr-only" aria-labelledby="size-choice-4-label">
+                  <p id="size-choice-4-label">
+                    L
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="XL" class="sr-only" aria-labelledby="size-choice-5-label">
+                  <p id="size-choice-5-label">
+                    XL
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="2XL" class="sr-only" aria-labelledby="size-choice-6-label">
+                  <p id="size-choice-6-label">
+                    2XL
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer">
+                  <input type="radio" name="size-choice" value="3XL" class="sr-only" aria-labelledby="size-choice-7-label">
+                  <p id="size-choice-7-label">
+                    3XL
+                  </p>
+
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <div class="absolute -inset-px rounded-md pointer-events-none" aria-hidden="true"></div>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add to bag</button>
+        </form>
+                </div>
+                <div class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+        <!-- Description and details -->
+        <div>
+          <h3 class="sr-only">Description</h3>
+
+          <div class="space-y-6">
+            <p class="text-base text-gray-900">The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee has you covered.</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+
+          <div class="mt-4">
+            <ul role="list" class="pl-4 list-disc text-sm space-y-2">
+              <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn locally</span></li>
+
+              <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary colors</span></li>
+
+              <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp; pre-shrunk</span></li>
+
+              <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
+            </ul>
+          </div>
+                        </div>
+
+                         <div class="mt-10">
+                            <h2 class="text-sm font-medium text-gray-900">Details</h2>
+
+                             <div class="mt-4 space-y-6">
+                                <p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    
+    
+
+        <!-- Product info -->
+      <div class="product-info"></div> 
+        <div class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
+      <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+        <h1 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+          Basic Tee 6-Pack
+        </h1>
+      </div>
+
+      <!-- Options -->
+      
+
+      
+                </div>
+        
+        </div>
+      <!-- end prodcut -->
+
+     
+   
+      <!-- List -->
+
+      
+
+      <!-- A better way to send money -->
+
+      
+      <!-- contact -->
+
+    <!-- info member team -->
+     
+  
+    <!-- footer -->
+          
+      <section class="">
+        <h1 class="text-center font-bold mt-10 ">
+          Footer icons required Unicons (npm i @iconscout/unicons)
+      </h1>
+
+      <footer class="footerbg-gray-800 pt-10 sm:mt-10 pt-10 bg-gray-600">
+          <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
+              <!-- Col-1 -->
+              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+                  <!-- Col Title -->
+                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
+                      Getting Started
+                  </div>
+
+                  <!-- Links -->
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Installation
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Release Notes
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Upgrade Guide
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Using with Preprocessors
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Optimizing for Production
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Browser Support
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      IntelliSense
+                  </a>
+              </div>
+
+              <!-- Col-2 -->
+              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+                  <!-- Col Title -->
+                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
+                      Core Concepts
+                  </div>
+
+                  <!-- Links -->
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Utility-First
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Responsive Design
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Hover, Focus, & Other States
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Dark Mode
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Adding Base Styles
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Extracting Components
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Adding New Utilities
+                  </a>
+              </div>
+
+              <!-- Col-3 -->
+              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+                  <!-- Col Title -->
+                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
+                      Customization
+                  </div>
+
+                  <!-- Links -->
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Configuration
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Theme Configuration
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Breakpoints
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Customizing Colors
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Customizing Spacing
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Configuring Variants
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Plugins
+                  </a>
+              </div>
+
+              <!-- Col-3 -->
+              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+                  <!-- Col Title -->
+                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
+                      Community
+                  </div>
+
+                  <!-- Links -->
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      GitHub
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Discord
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      Twitter
+                  </a>
+                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                      YouTube
+                  </a>
+              </div>
+          </div>
+
+          <!-- Copyright Bar -->
+          <div class="pt-2">
+              <div class="flex pb-5 px-3 m-auto pt-5 
+                  border-t border-gray-500 text-gray-400 text-sm 
+                  flex-col md:flex-row max-w-6xl">
+                  <div class="mt-2">
+                      © Copyright 1998-year. All Rights Reserved.
+                  </div>
+
+                  <!-- Required Unicons (if you want) -->
+                  <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+                      <a href="#" class="w-6 mx-1">
+                          <i class="uil uil-facebook-f"></i>
+                      </a>
+                      <a href="#" class="w-6 mx-1">
+                          <i class="uil uil-twitter-alt"></i>
+                      </a>
+                      <a href="#" class="w-6 mx-1">
+                          <i class="uil uil-youtube"></i>
+                      </a>
+                      <a href="#" class="w-6 mx-1">
+                          <i class="uil uil-linkedin"></i>
+                      </a>
+                      <a href="#" class="w-6 mx-1">
+                          <i class="uil uil-instagram"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      </section>
+</div>
+    <!-- cấu hình file  -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    loop:true,
+    nav:true,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },            
+        960:{
+            items:1
+        },
+        1200:{
+            items:1
+        }
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+    </script>
+  </body>
+</html>

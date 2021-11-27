@@ -258,3 +258,14 @@ a {
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
 }
+
+.hidden.aspect-w-3.aspect-h-4.rounded-lg.overflow-hidden.lg\:flex {
+    padding: 0rem;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+    padding: 23 0 0 0rem;
+    top: -15px;
+}

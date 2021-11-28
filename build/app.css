@@ -269,3 +269,7 @@ a {
     padding: 23 0 0 0rem;
     top: -15px;
 }
+
+.owl-theme .owl-nav{
+  margin-top: -100px;
+}

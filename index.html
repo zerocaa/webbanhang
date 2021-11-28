@@ -1,1072 +1,1444 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <script type="module" src="/@vite/client"></script>
 
-    <script type="module" src="/@vite/client"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P&T Shop</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document123</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="/build/app.css" />
-    <link rel="stylesheet" href="/build/style.css" />
-    <link rel="stylesheet" href="/build/tailwind.css" />
-    <link rel="stylesheet" href="/themify-icons/themify-icons.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-   
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-    
-    <!--tesst  -->
-  </head>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-  <body style="background: #edf2f7;">
-    <div class="container" >
-      <!--HEADer -->
-      <div class="navbar navbar" >
-        <div class="max-w-full px-4 sm:px-6 ">
-          <div
-            class="fix
-              flex  
-              border-b-2 border-gray-100
-              py-6
-              md:justify-start md:space-x-10
-              
-            "
-          >
-            <div class="flex justify-start lg:w-80px lg:flex">
-              <img
-                class="h-12 w-14 sm:h-14 rounded-full"
-                src="https://images.unsplash.com/photo-1631795822849-e30bd7bde9e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=376&q=80"
-                alt=""
-              />
-            </div>
-            <div class="-mr-1 -my-1 md:hidden">
-            </div>
-            <nav class="main-nav hidden md:flex space-x-10">
-              <div class="relative">
-                <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-                 
-                <button
-                  type="button"
-                  class="
-                   link-container
-                  "
-                  aria-expanded="false"
-                >
-                  <a class="link-two link-container text-xl font-bold">Trang Chủ</a>
-                </button>
-                <div
-                  class="
-                    absolute
-                    z-10
-                    -ml-4
-                    mt-3
-                    transform
-                    px-2
-                    w-screen
-                    max-w-md
-                    sm:px-0
-                    lg:ml-0 lg:left-1/2 lg:-translate-x-1/2
-                  "
-                >
-                  <div
-                    class="
-                      rounded-lg
-                      shadow-lg
-                      ring-1 ring-black ring-opacity-5
-                      overflow-hidden
-                    "
-                  ></div>
-                </div>
-              </div>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- link font chữ -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <!-- link icon -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- link css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/productdetail.css">
+  <link rel="stylesheet" href="./assets/css/reponsive1.css">
+  <link rel="icon" href="./assets/img/logo/main.png" type="image/x-icon" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
 
-              <a
-                href="#"
-                class="link-container link-three link-container  text-xl font-bold "
-              >
-               Danh sách sản phẩm của chúng tôi
-              </a>
-              <a
-                href="#"
-                class="link-container link-two link-container  text-xl font-bold"
-              >
-                Thông tin
-              </a>
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
 
-              <a
-                href="#"
-                class="link-container link-three link-container  text-xl font-bold"
-              >
-               Liên hệ
-              </a>
-              
-  <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button @click="open = !open" class="mt-5">
-          <span class="link-two link-container  text-xl font-bold">Quản lí </span>
-          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        
-        </button>
-        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="dropdown absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-56">
-          <div class="px-2 py-2 bg-gray-200 rounded-md shadow">
-            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="user.html">Tài khoản khách hàng</a>
-            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
-            <a class="text-center block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-blue-500 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+  form.example button:hover {
+    background: #0b7dda;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+          /* Mobile & tablet  */
+@media (max-width: 1023px) {
+}
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .owl-item {
+    width: 396px;
+    padding: 16px 0;
+  }
+}
+/* mobile */
+@media (max-width: 739px) {
+  .owl-item {
+    float: unset;
+    padding: 16px 0;
+  }
+} 
+</style>
+
+<body style="background-color: rgb(248, 242, 236);">
+  <div class="overlay hidden"></div>
+  <!-- mobile menu -->
+  <div class="mobile-main-menu">
+    <div class="drawer-header">
+      <a href="">
+        <div class="drawer-header--auth">
+          <div class="_object">
+            <img src="./assets/img/product/giayxah2.jpg" alt="">
+          </div>
+          <div class="_body">Đăng nhập
+            <br>Nhận nhiều ưu đãi hơn
           </div>
         </div>
-      </div> 
-             
-            </nav>
-            <div  
-              class="form-login hidden md:flex items-center justify-end md:flex-1 lg:max-w-xl  ml-32"
-            >
-              <a
-                href="#"
-                class="
-                   ml-8
-                  whitespace-nowrap
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-4
-                  py-2
-                  border border-transparent
-                  rounded-md
-                  shadow-sm
-                  text-base
-                  font-medium
-                  text-white
-                  bg-indigo-600
-                  hover:bg-indigo-700
-                "
-              >
-                Sign in
+      </a>
+    </div>
+    <ul class="ul-first-menu">
+      <li>
+        <a href="">Đăng nhập</a>
+      </li>
+      <li>
+        <a href="" class="abc">Đăng kí</a>
+      </li>
+    </ul>
+    <!-- <ul class="ul-first-menu">
+      <li>
+        <a href="">Tài khoản của tôi</a>
+      </li>
+      <li>
+        <a href="">Địạ chỉ của tôi</a>
+      </li>
+      <li>
+        <a href="">Đơn mua</a>
+      </li>
+      <li>
+        <a href="" class="list-like-noicte">Danh sách yêu thích</a>
+        <span id="header__second__like--notice" class="header__second__like--notice">3</span>
+      </li>
+      <li>
+        <a href="">Đăng xuất</a>
+      </li> -->
+    </ul>
+    <div class="la-scroll-fix-infor-user">
+      <div class="la-nav-menu-items">
+        <div class="la-title-nav-items">
+          <strong>Danh mục</strong>
+        </div>
+        <ul class="la-nav-list-items">
+          <li class="ng-scope">
+            <a href="">Trang chủ</a>
+          </li>
+          <li class="ng-scope">
+            <a href="./intro.html">Giới thiệu</a>
+          </li>
+          <li class="ng-scope ng-has-child1">
+            <a href="./Product.html">Sản phẩm <i class="fas fa-plus cong"></i> <i class="fas fa-minus tru hidden"></i></a>
+            <ul class="ul-has-child1">
+              <li class="ng-scope ng-has-child2">
+                <a href="./Product.html">Tất cả sản phẩm <i class="fas fa-plus cong1" onclick="hienthi(1,`abc`)"></i> <i
+                    class="fas fa-minus tru1 hidden" onclick="hienthi(1,`abc`)"></i></a>
+                <ul class="ul-has-child2 hidden" id="abc">
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng đá</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Chạy</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Cầu lông</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng rổ</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Quần vợt</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bơi lội</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">GOLF</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="ng-scope ng-has-child2">
+                <a href="./Product.html">Quần áo <i class="fas fa-plus cong2" onclick="hienthi(2,`abc2`)"></i> <i
+                    class="fas fa-minus tru2 hidden" onclick="hienthi(2,`abc2`)"></i></a>
+                <ul class="ul-has-child2 hidden" id="abc2">
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng đá</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Chạy</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Cầu lông</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng rổ</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Quần vợt</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bơi lội</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">GOLF</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="ng-scope ng-has-child2">
+                <a href="./Product.html">Già dép<i class="fas fa-plus cong3" onclick="hienthi(3,`abc3`)"></i> <i
+                    class="fas fa-minus tru3 hidden" onclick="hienthi(3,`abc3`)"></i></a>
+                <ul class="ul-has-child2 hidden" id="abc3">
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng đá</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Chạy</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Cầu lông</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng rổ</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Quần vợt</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bơi lội</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">GOLF</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="ng-scope ng-has-child2">
+                <a href="./Product.html">Phụ kiện <i class="fas fa-plus cong4" onclick="hienthi(4,`abc4`)"></i> <i
+                    class="fas fa-minus tru4 hidden " onclick="hienthi(4,`abc4`)"></i></a>
+                <ul class="ul-has-child2 hidden" id="abc4">
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng đá</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Chạy</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Cầu lông</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bóng rổ</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Quần vợt</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">Bơi lội</a>
+                  </li>
+                  <li class="ng-scope">
+                    <a href="./Product.html">GOLF</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="ng-scope">
+            <a href="./news.html">Tin tức</a>
+          </li>
+          <li class="ng-scope">
+            <a href="./contact.html">Liên hệ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ul class="mobile-support">
+      <li>
+        <div class="drawer-text-support">Hỗ trợ</div>
+      </li>
+      <li>
+        <i class="fas fa-phone-square-alt footer__item-icon">HOTLINE: </i>
+        <a href="tel:19006750">19006750</a>
+      </li>
+      <li>
+        <i class="fas fa-envelope-square footer__item-icon">Email: </i>
+        <a href="mailto:support@sapo.vn">support@gmail.vn</a>
+      </li>
+    </ul>
+  </div>
+  <!-- end mobile menu -->
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <div class="top-link clearfix hidden-sm hidden-xs">
+        <div class="row">
+          <div class="col-6 social_link">
+            <div class="social-title">Theo dõi: </div>
+            <a href="https://www.facebook.com/zeroryo25/"><i class="fab fa-facebook" style="font-size: 24px; margin-right: 10px"></i></a>
+            <a href=""><i class="fab fa-instagram" style="font-size: 24px; margin-right: 10px;color: pink;"></i></a>
+            <a href=""><i class="fab fa-youtube" style="font-size: 24px; margin-right: 10px;color: red;"></i></a>
+            <a href=""><i class="fab fa-twitter" style="font-size: 24px; margin-right: 10px"></i></a>
+          </div>
+          <div class="col-6 login_link">
+            <ul class="header_link right m-auto">
+              <li>
+                <a href="./Login.html"><i class="fas fa-sign-in-alt mr-3"></i>Đăng nhập</a>
+              </li>
+              <li>
+                <a href="./registration.html"><i class="fas fa-user-plus mr-3" style="margin-left: 10px;"></i>Đăng kí</a>
+              </li>
+            </ul>
+            <ul class="nav nav__first right">
+                <li class="nav-item nav-item__first nav-item__first-user">
+                  <img src="./assets/img/product/noavatar.png" alt="" class="nav-item__first-img">
+                  <span class="nav-item__first-name">Huy Hùng</span>
+                  <ul class="nav-item__first-menu">
+                    <li class="nav-item__first-item">
+                      <a href="">Tài khoản của tôi</a>
+                    </li>
+                    <li class="nav-item__first-item">
+                      <a href="">Địa chỉ của tôi</a>
+                    </li>
+                    <li class="nav-item__first-item">
+                      <a href="">Đơn mua</a>
+                    </li>
+                    <li class="nav-item__first-item">
+                      <a href="">Đăng xuất</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-main clearfix">
+        <div class="row">
+          <div class="col-lg-3 col-100-h">
+            <div id="trigger-mobile" class="visible-sm visible-xs"><i class="fas fa-bars"></i></div>
+            <div class="logo">
+              <a href="">
+                <img src="./assets/img/logo/logomain.png" alt="">
               </a>
-              <a
-                href="#"
-                class="
-                  ml-8
-                  whitespace-nowrap
-                  inline-flex
-                  items-center
-                  justify-center
-                  px-4
-                  py-2
-                  border border-transparent
-                  rounded-md
-                  shadow-sm
-                  text-base
-                  font-medium
-                  text-white
-                  bg-indigo-600
-                  hover:bg-indigo-700
-                "
-              >
-                Sign up
+            </div>
+            <div class="mobile_cart visible-sm visible-xs">
+              <a href="./cart.html" class="header__second__cart--icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="header__second__cart--notice" class="header__second__cart--notice">3</span>
+              </a>
+              <a href="./listlike.html" class="header__second__like--icon">
+                <i class="far fa-heart"></i>
+                <span id="header__second__like--notice" class="header__second__like--notice">3</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 m-auto pdt15">
+            <form class="example" action="./Product.html">
+              <input type="text" class="input-search" placeholder="Tìm kiếm.." name="search">
+              <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="col-3 m-auto hidden-sm hidden-xs">
+            <div class="item-car clearfix">
+              <a href="./cart.html" class="header__second__cart--icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="header__second__cart--notice" class="header__second__cart--notice">3</span>
+              </a>
+            </div>
+            <div class="item-like clearfix">
+              <a href="./listlike.html" class="header__second__like--icon">
+                <i class="far fa-heart"></i>
+                <span id="header__second__like--notice" class="header__second__like--notice">3</span>
               </a>
             </div>
           </div>
         </div>
-      
       </div>
-
-      <!-- test -->
-
-      <!-- end test -->
-
-      <!--intro-->
-
-      <div class="intro relative mt-16 ">
-  <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
-      <div class="sm:max-w-lg">
-        <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-          Summer styles are finally here
-        </h1>
-        <p class="mt-4 text-xl text-gray-500">This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.</p>
+    </div>
+    <nav class="header_nav hidden-sm hidden-xs">
+      <div class="container">
+        <ul class="header_nav-list nav">
+          <li class="header_nav-list-item "><a href="./index.html" class="active">Trang chủ</a></li>
+          <li class="header_nav-list-item"><a href="./intro.html">Giới thiệu</a></li>
+          <li class="header_nav-list-item has-mega">
+            <a href="./Product.html">Sản phẩm<i class="fas fa-angle-right" style="margin-left: 5px;"></i></a>
+            <div class="mega-content" style="overflow-x: hidden;">
+              <div class="row">
+                <ul class="col-8 no-padding level0">
+                  <li class="level1">
+                    <a class="hmega" href="./Product.html">Tất cả sản phẩm</a>
+                    <!-- <ul class="level1">
+                        <li class="level2"><a href="">Bóng đá</a></li>
+                        <li class="level2"><a href="">Bóng đá</a></li>
+                        <li class="level2"><a href="">Bóng đá</a></li>
+                        <li class="level2"><a href="">Bóng đá</a></li>
+                      </ul> -->
+                  </li>
+                  <li class="level1">
+                    <a class="hmega">Giày, dép</a>
+                    <ul class="level1">
+                      <li class="level2"><a href="./Product.html">Bóng đá</a></li>
+                      <li class="level2"><a href="./Product.html">Chạy</a></li>
+                      <li class="level2"><a href="./Product.html">Cầu lông</a></li>
+                      <li class="level2"><a href="./Product.html">Bóng rổ</a></li>
+                      <li class="level2"><a href="./Product.html">Quần vợt</a></li>
+                    </ul>
+                  </li>
+                  <li class="level1">
+                    <a class="hmega">Quần, áo</a>
+                    <ul class="level1">
+                      <li class="level2"><a href="./Product.html">Bóng đá</a></li>
+                      <li class="level2"><a href="./Product.html">Chạy</a></li>
+                      <li class="level2"><a href="./Product.html">Cầu lông</a></li>
+                      <li class="level2"><a href="./Product.html">Bóng rổ</a></li>
+                      <li class="level2"><a href="./Product.html">Quần vợt</a></li>
+                    </ul>
+                  </li>
+                  <li class="level1">
+                    <a class="hmega">Phụ kiện</a>
+                    <ul class="level1">
+                      <li class="level2"><a href="./Product.html">Bóng đá</a></li>
+                      <li class="level2"><a href="./Product.html">Chạy</a></li>
+                      <li class="level2"><a href="./Product.html">Cầu lông</a></li>
+                      <li class="level2"><a href="./Product.html">Bóng rổ</a></li>
+                      <li class="level2"><a href="./Product.html">Quần vợt</a></li>
+                      <li class="level2"><a href="./Product.html">Bơi lội</a></li>
+                      <li class="level2"><a href="./Product.html">Golf</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="col-4">
+                  <a href="">
+                    <picture>
+                      <img src="https://media.giphy.com/media/mj7HcKFq23oobJMcOG/giphy.gif" alt="" width="80%">
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="header_nav-list-item"><a href="./news.html">Tin tức</a></li>
+          <li class="header_nav-list-item"><a href="./contact.html">Liên hệ</a></li>
+        </ul>
       </div>
-      <div>
-        <div class="mt-10">
-          <!-- Decorative image grid -->
-          <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full">
-            <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-              <div class="flex items-center space-x-6 lg:space-x-8">
-                <div class="nhosua flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="w-full h-full object-center object-cover">
+    </nav>
+  </header>
+  <!-- end header -->
+  <!-- content -->
+  <div class="container">
+    <!-- slide show -->
+    <div class="row">
+      <section class="awe-section-1">
+        <div class="mt-4 top-sliders col-md-12">
+          <div class="slideshow">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/img/slideshow/1.jpg" alt="Los Angeles" width="1100" height="550">
+                  <div class="carousel-caption">
+                    <a href="./Product.html" class="click-slideshow">Xem chi tiết</a>
                   </div>
                 </div>
-                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="w-full h-full object-center object-cover">
-                  </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="w-full h-full object-center object-cover">
+                <div class="carousel-item">
+                  <img src="./assets/img/slideshow/2.jpg" alt="Chicago" width="1100" height="550">
+                  <div class="carousel-caption">
+                    <a href="./Product.html" class="click-slideshow">Xem chi tiết</a>
                   </div>
                 </div>
-                <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="w-full h-full object-center object-cover">
+                <div class="carousel-item">
+                  <img src="./assets/img/slideshow/3.jpg" alt="New York" width="1100" height="550">
+                  <div class="carousel-caption">
+                    <a href="./Product.html" class="click-slideshow">Xem chi tiết</a>
                   </div>
-                  <div class="w-44 h-64 rounded-lg overflow-hidden">
-                    <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="w-full h-full object-center object-cover">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- end slide show -->
+    <div class="product">
+      <div class="container">
+        <div class="product_popular">
+          <h3 class="product__popular title-product">Sản phẩm phổ biến</h3>
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-20">
+              <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="./assets/img/product/addidas1.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title" >Joma Super Regate</h4>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">Phần trên được sản xuất bằng cách sử dụng sợi nhỏ, nylon và TPU chèn trên nylon để bảo vệ chống nứt nẻ
+                    . Joma Super Regate bao gồm công nghệ BẢO VỆ ở cổ chân để tăng cường sức đề kháng 
+                    và sự ổn định cho đòn đánh. Joma Super Regate có hệ thống thông gió VTS cho phép thở và
+                     luồng không khí lớn hơn bên trong giày.
+                    Đế lót EVA định hình sẵn có thể điều chỉnh theo hình dạng của bàn chân.
+                     Đế được sản xuất bằng EVA tự nhiên góp phần tạo đệm cho giày bằng cách
+                      hấp thụ tác động từ bàn chân.</p>
+                  <a href="./ProductDetail.html" title="GIÀY ADIDAS 4D FUTURECRAFT" class="btn btn-buynow">Xem ngay <i class="fas fa-arrow-right"
+                      style="font-size: 16px;margin-left: 5px;"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="./assets/img/product/stansmith.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">adidas stan smith</h4>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">Đúng chất kinh điển.
+                     Trước đây, Stan Smith từng là ngôi sao lớn của làng quần vợt.
+                      Mang đôi giày adidas xứng tầm tên tuổi của ông, bạn sẽ là ngôi sao đường phố.
+                       Từ trên xuống dưới, đôi giày kinh điển này bắt trọn tinh hoa phong cách của kiểu dáng nguyên bản năm 1971,
+                     với thiết kế bằng da tối giản và đường nét gọn gàng.</p>
+                  <a href="./ProductDetail.html" class="btn btn-buynow">Xem ngay <i class="fas fa-arrow-right "
+                      style="font-size: 16px;margin-left: 5px;"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+              <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="./assets/img/product/stansmith.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">adidas stan smith</h4>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">Đúng chất kinh điển.
+                     Trước đây, Stan Smith từng là ngôi sao lớn của làng quần vợt.
+                      Mang đôi giày adidas xứng tầm tên tuổi của ông, bạn sẽ là ngôi sao đường phố.
+                       Từ trên xuống dưới, đôi giày kinh điển này bắt trọn tinh hoa phong cách của kiểu dáng nguyên bản năm 1971,
+                     với thiết kế bằng da tối giản và đường nét gọn gàng.</p>
+                  <a href="./ProductDetail.html" class="btn btn-buynow">Xem ngay <i class="fas fa-arrow-right "
+                      style="font-size: 16px;margin-left: 5px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__new">
+          <h3 class="product__ne title-product">Sản phẩm mới</h3>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+                <a href="./ProductDetail.html" class="product__new-item">
+                  <div class="card" style="width: 100%">
+                    <div>
+                      <img class="card-img-top" src="./assets/img/product/ambush1.jpg" alt="Card image cap">
+                      <form action="" class="hover-icon hidden-sm hidden-xs">
+                        <input type="hidden">
+                        <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                          <i class="fas fa-cart-plus"></i>
+                        </a>
+                        <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                          <i class="fas fa-search"></i>
+                        </a>
+                      </form>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title custom__name-product">
+                        Áo bloolyn
+                      </h5>
+                      <div class="product__price">
+                        <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                        <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                      </div>
+                      <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                        </span>
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fas fa-star"></i>
+                            <i class="home-product-item__star--gold fas fa-star"></i>
+                            <i class="home-product-item__star--gold fas fa-star"></i>
+                            <i class="home-product-item__star--gold fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="home-product-item__sold">79 đã bán</span>
+                      </div>
+                      <div class="sale-off">
+                        <span class="sale-off-percent">20%</span>
+                        <span class="sale-off-label">GIẢM</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/aohoodie1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Hoodie Adidas
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/Ao_Gio_Adicolor_Classics_DJen_GN2780_21_model.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Áo khoác adidas
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/áo-ngực-thun-gân-medium-support-3-sọc-believe-this.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Đồ gym
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="product__sale">
+          <h3 class="product__sale title-product">Top sản phẩm hot</h3>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/vaymidi1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Quần giả váy
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/ult1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                     Giày Ultra
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/tuiprimegreen1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Balo
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/tuicheo1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Túi chéo
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <section class="awe-section-9">
+          <div class="section_policy clearfix">
+            <div class="col-12">
+              <div class="owl-policy-mobile">
+                <div class="owl-stage-outer">
+                  <div class="owl-stage">
+                    <div class="owl-item">
+                      <div class="section_policy_content">
+                      
+                          <img src="https://bizweb.dktcdn.net/100/344/983/themes/704702/assets/policy_images_1.png?1628514159582" alt="">
+                          <div class="section-policy-padding">
+                            <h3>Miễn phí vận chuyển</h3>
+                            <div class="section_policy_title">Cho các đơn hàng</div>
+                          </div>
+                      
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="section_policy_content">
+                       
+                          <img src="https://bizweb.dktcdn.net/100/344/983/themes/704702/assets/policy_images_2.png?1628514159582" alt="">
+                          <div class="section-policy-padding">
+                            <h3>Hỗ trợ 24/7</h3>
+                            <div class="section_policy_title">Liên hệ hỗ trợ 24h/ngày</div>
+                          </div>
+                      
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="section_policy_content">
+                       
+                          <img src="	https://bizweb.dktcdn.net/100/344/983/themes/704702/assets/policy_images_3.png?1628514159582" alt="">
+                          <div class="section-policy-padding">
+                            <h3>Hoàn tiền 100%</h3>
+                            <div class="section_policy_title">Nếu sản phẩm bị lỗi, hư hỏng</div>
+                          </div>
+                        
+                      </div>
+                    </div>
+                    <div class="owl-item">
+                      <div class="section_policy_content">
+                      
+                          <img src="https://bizweb.dktcdn.net/100/344/983/themes/704702/assets/policy_images_4.png?1628514159582" alt="">
+                          <div class="section-policy-padding">
+                            <h3>Thanh toán</h3>
+                            <div class="section_policy_title">Được bảo mật 100%</div>
+                          </div>
+                      
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <a href="#" class="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+        </section>
+        <div class="product__yml">
+          <h3 class="product__yml title-product">Có thể bạn sẽ thích</h3>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/sandalduramo1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Giày sandan
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/stansmithgolf2.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Adidas stansmith
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-20">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/superfly1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Giày bóng đá
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <a href="./ProductDetail.html" class="product__new-item">
+                <div class="card" style="width: 100%">
+                  <div>
+                    <img class="card-img-top" src="./assets/img/product/tatchaybo1.jpg" alt="Card image cap">
+                    <form action="" class="hover-icon hidden-sm hidden-xs">
+                      <input type="hidden">
+                      <a href="./pay.html" class="btn-add-to-cart" title="Mua ngay">
+                        <i class="fas fa-cart-plus"></i>
+                      </a>
+                      <a data-toggle="modal" data-target="#myModal" class="quickview" title="Xem nhanh">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title custom__name-product">
+                      Tất
+                    </h5>
+                    <div class="product__price">
+                      <p class="card-text price-color product__price-old">1,000,000 đ</p>
+                      <p class="card-text price-color product__price-new">1,000,000 đ</p>
+                    </div>
+                    <div class="home-product-item__action">
+                      <span class="home-product-item__like home-product-item__like--liked">
+                          <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                          <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                      </span>
+                      <div class="home-product-item__rating">
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="home-product-item__star--gold fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <span class="home-product-item__sold">79 đã bán</span>
+                    </div>
+                    <div class="sale-off">
+                      <span class="sale-off-percent">20%</span>
+                      <span class="sale-off-label">GIẢM</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shoesnews">
+      <div class="container">
+        <h3 class="shoesnews__title">Tin tức</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-20">
+            <a href="./newDetail.html" class="product__new-item">
+              <div class="card" style="width: 100%">
+                <img class="card-img-top" src="./assets/img/product/new2.jpg" alt="Card image cap" height="230px">
+                <div class="card-body">
+                  <h5 class="card-title custom__name-product title-news">
+                    Tin tức về giày puma
+                  </h5>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">Trong phạm vi bài viết ngày hôm nay, hãy cùng Thanh Hùng Futsal khám phá mẫu giày
+                     đá bóng độc nhất vô nhị được nhà Swoosh thửa riêng cho cậu bé vàng của xứ sở Lục Lăng nhé! </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-20">
+            <a href="./newDetail.html" class="product__new-item">
+              <div class="card" style="width: 100%">
+                <img class="card-img-top" src="./assets/img/product/new1.jpg" alt="Card image cap" height="230px">
+                <div class="card-body">
+                  <h5 class="card-title custom__name-product title-news">
+                    Người sáng lập đế chế puma
+                  </h5>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">"PUMA ra mắt KING TOP DASSLER phiên bản giới hạn
+                    20/11/2021
+                    Nhằm tôn vinh những di sản mà Rudolph Dassler, người sáng lập Puma để lại, mới đây hãng thể thao nước Đức đã cho ra đời phiên bản Puma King Top Dassler
+                     với chỉ giới hạn 100 đôi trên toàn thế giới.
+                    Đôi giày đá banh được thiết kế theo phong cách đơn giản, đúng với tinh thần của dòng sản phẩm Puma King
+                    . Upper là chất liệu da Kangaroo cao cấp với tone màu trắng chủ đạo lấy ý tưởng từ những bộ
+                     quần áo sạch sẽ mà cậu bé Dassler đã giặt thuê từ khi còn nhỏ,
+                     thông qua đó cũng xây dựng lên tinh thần kinh doanh và ý chí khởi nghiệp từ sớm của cậu.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-20">
+            <a href="./newDetail.html" class="product__new-item">
+              <div class="card" style="width: 100%">
+                <img class="card-img-top" src="./assets/img/product/new3.jpg" alt="Card image cap" height="230px" >
+                <div class="card-body">
+                  <h5 class="card-title custom__name-product title-news">
+                    Thông tin bên lề Uero
+                  </h5>
+                  <p class="card-text custom__name-product" style="font-weight: 400;">"Bóng đá đã trở lại", câu nói tưởng chừng bình thường nhưng lại vô cùng ý nghĩa trong thời điểm hiện tại, khi mà chúng ta đang phải sống chung với đại dịch Covid-19.
+                    Các sân vận động chật kín cổ động viên với các tràng vỗ tay,
+                     tiếng cổ vũ cũng là một hình ảnh đánh dấu chiến thắng của nhân loại trước Covid-19.
+                      Bên cạnh các trận đấu bóng đá đỉnh cao đang diễn ra khắp các sân cỏ trên toàn thế giới,
+                    thì các ông lớn như Nike, adidas hay Puma, v.v...</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="shoesnews__all">
+          <a href="./Product.html" class="shoesnews__all-tittle">Xem tất cả</a> <i class="fi-rs-angle-right"></i>
         </div>
       </div>
     </div>
   </div>
-      </div>
-   
-      <!-- List -->
-
-      <div class="sanpham bg-gray-300 mt-10 border-b-4 border-red-400 p-16">
-        <div
-          class="
-            max-w-2xl
-            mx-auto
-           
-            py-4
-         
-          "
-        >
-          <h2
-            class="
-              text-center text-2xl
-              font-extra bold
-              tracking-tight
-              text-gray-900
-              font-bold
-            "
-          >
-            Các Dòng APPLE Mới Ra Mắt
-          </h2>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <img src="./assets/img/logo/logomain.png" alt="" width="100px" height="100px"
+            style="border-radius: 50%;border: 3px solid #000;margin-bottom: 20px;">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <p><i class="fas fa-search-location footer__item-icon"></i> Ho Chi Minh, Viet Nam</p>
+            </li>
+            <li class="footer__item">
+              <p><i class="fas fa-phone-square-alt footer__item-icon"></i> Phone: <a
+                  href="tel:0123456789">0123456789</a></p>
+            </li>
+            <li class="footer__item">
+              <p><i class="fas fa-envelope-square footer__item-icon"></i> Email: <a
+                  href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-facebook" style="font-size: 24px; margin-right: 10px"></i></a>
+              <a href=""><i class="fab fa-instagram" style="font-size: 24px; margin-right: 10px;color: pink;"></i></a>
+              <a href=""><i class="fab fa-youtube" style="font-size: 24px; margin-right: 10px;color: red;"></i></a>
+              <a href=""><i class="fab fa-twitter" style="font-size: 24px; margin-right: 10px"></i></a>
+            </li>
+          </ul>
         </div>
-
-        <div class="owl-carousel owl-theme p-4" >
-          <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-              <div
-                class="
-                  w-full
-                  min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 
-                "
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-              </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
-           </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div style="display: flex;justify-content:space-between;cursor: pointer;margin-bottom: 8px;"
+            data-toggle="collapse" data-target="#demo2">
+            <h3 class="footer__heading">Thông tin của chúng tôi</h3><i class="fas fa-chevron-down checkdl1"></i>
           </div>
-        <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-              <div
-                class="
-                  w-full
-                  min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 
-                "
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-              </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
+          <ul class="footer__list collapse show" id="demo2">
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Cơ sở 1: 26 Đường D1, P12, Quận Tân Bình, TP.HCM</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Cơ sở 2: 86 Đinh Bộ Lĩnh, P10, Quận Bình Thanh, TP.HCM</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Lĩnh vực kinh doanh</a>
+            </li>
+          </ul>
         </div>
-          </div> <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-              <div
-                class="
-                  w-full
-                  min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 
-                "
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-              </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
-           </div>
-          </div> <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-              <div
-                class="
-                  w-full
-                  min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 
-                "
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-              </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
-           </div>
-          </div> <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-              <div
-                class="
-                  w-full
-                  min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 
-                "
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-              </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
-           </div>
-          </div> <div class="item">
-            <div class="card-wrapper">
-               <div class="group relative">
-                  <div class="w-full min-h-80
-                  bg-gray-200
-                  aspect-w-1 aspect-h-1
-                  rounded-md
-                  overflow-hidden
-                  group-hover:opacity-75
-                  lg:h-80 lg:aspect-none
-                 ">
-                <img
-                  src="https://images.unsplash.com/photo-1634618774956-36f5b1618be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Front of men&#039;s Basic Tee in black."
-                  class="
-                    w-full
-                    h-full
-                    object-center object-cover
-                    lg:w-full lg:h-full
-                  "
-                />
-                 </div>
-              <div class="text-center mt-4">
-                <h2 class="text-lg mb-3">IPhone 14 128GB Chính Hãng</h2>
-                <p class="text center text-lg font-medium text-redEF mb-3">
-                  18,690,000 ₫
-                </p>
-                <div class="description">
-                  <h3 class="text-justify mt-1 text-lg text-gray-900">
-                  kế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Minikế ống kính camera ...Thiết kế nhỏ gọn, màu sắc thời thượng iPhone 13 Mini
-                </h3> 
-                </div>
-                      <form action="">
-                        <button class="custom-btn btn-5 font-bold text-lg">Xem thêm</button>
-                      </form>
-                
-              </div>
-            </div>
-           </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div style="display: flex;justify-content:space-between;cursor: pointer;margin-bottom: 8px;"
+            data-toggle="collapse" data-target="#demo1">
+            <h3 class="footer__heading">Chính sách</h3><i class="fas fa-chevron-down checkdl1"></i>
           </div>
+          <ul class="footer__list collapse show" id="demo1">
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Chính sách bảo hành</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Chính sách đổi trả</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Chính sách thanh toán</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Chính sách giao nhận hàng</a>
+            </li>
+            <li class="footer__item">
+              <a href="" class="footer__item--link">Chính sách bảo mật</a>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <!-- A better way to send money -->
-
-      <div class="about py-12 bg-red-50 mt-10 mb-2 border-b-4 border-red-400 p-16" >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="lg:text-center">
-            <h2
-              class="
-                text-xl text-indigo-600
-                font-semibold
-                tracking-wide
-                uppercase
-              "
-            >
-              Apple
-            </h2>
-            <p
-              class="
-                mt-2
-                text-3xl
-                leading-8
-                font-extrabold
-                tracking-tight
-                text-gray-900
-                sm:text-4xl
-              "
-            >
-              A better way to send money
-            </p>
-            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
-            </p>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div style="display: flex;justify-content:space-between;cursor: pointer;margin-bottom: 8px;"
+            data-toggle="collapse" data-target="#demo">
+            <h3 class="footer__heading">Hỗ trợ chung</h3><i class="fas fa-chevron-down checkdl1"></i>
           </div>
-
-          <div class="mt-10">
-            <dl
-              class="
-                space-y-10
-                md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10
-              "
-            >
-              <div class="relative">
-                <dt>
-                  <div
-                    class="
-                      absolute
-                      flex
-                      items-center
-                      justify-center
-                      h-12
-                      w-12
-                      rounded-md
-                      bg-indigo-500
-                      text-white
-                    "
-                  >
-                    <!-- Heroicon name: outline/globe-alt -->
-                    <svg
-                      class="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                      />
-                    </svg>
-                  </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Competitive exchange rates
-                  </p>
-                </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </dd>
+          <ul class="footer__list collapse show" id="demo">
+            <li class="footer__item">
+              <a href="#" class="footer__item--link">Trang chủ</a>
+            <li class="footer__item">
+              <a href="./intro.html" class="footer__item--link">Giới thiệu</a>
+            </li>
+            <li class="footer__item">
+              <a href="./Product.html" class="footer__item--link">Sản phẩm</a>
+            </li>
+            <li class="footer__item">
+              <a href="./news.html" class="footer__item--link">Tin tức</a>
+            </li>
+            <li class="footer__item">
+              <a href="./contact.html" class="footer__item--link">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__text">© Bản quyền thuộc về Huy Hùng</p>
+    </div>
+  </footer>
+  <div id="go-to-top">
+    <a class="btn-gototop"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- end footer -->
+  <!-- modal -->
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+      
+        <!-- Modal Header -->
+        <!-- <div class="modal-header">
+          <h4 class="modal-title">Giày ADIDAS</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> -->
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="mb-2 main-img-2">
+                <img src="./assets/img/product/ars1.jpg" alt="" id="img-main" xoriginal="./assets/img/product/ars1.jpg">
               </div>
-
-              <div class="relative">
-                <dt>
-                  <div
-                    class="
-                      absolute
-                      flex
-                      items-center
-                      justify-center
-                      h-12
-                      w-12
-                      rounded-md
-                      bg-indigo-500
-                      text-white
-                    "
-                  >
-                    <!-- Heroicon name: outline/scale -->
-                    <svg
-                      class="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                      />
-                    </svg>
-                  </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    No hidden fees
-                  </p>
-                </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </dd>
-              </div>
-
-              <div class="relative">
-                <dt>
-                  <div
-                    class="
-                      absolute
-                      flex
-                      items-center
-                      justify-center
-                      h-12
-                      w-12
-                      rounded-md
-                      bg-indigo-500
-                      text-white
-                    "
-                  >
-                    <!-- Heroicon name: outline/lightning-bolt -->
-                    <svg
-                      class="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Transfers are instant
-                  </p>
-                </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </dd>
-              </div>
-
-              <div class="relative">
-                <dt>
-                  <div
-                    class="
-                      absolute
-                      flex
-                      items-center
-                      justify-center
-                      h-12
-                      w-12
-                      rounded-md
-                      bg-indigo-500
-                      text-white
-                    "
-                  >
-                    <!-- Heroicon name: outline/annotation -->
-                    <svg
-                      class="h-6 w-6"
-                      xmlns="#"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                      />
-                    </svg>
-                  </div>
-                  <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                    Mobile notifications
-                  </p>
-                </dt>
-                <dd class="mt-2 ml-16 text-base text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <!-- contact -->
-      <div class="contact mt-10 border-b-4 border-red-400 p-16 ">
-      <h1 class="font-bold">Contact</h1>
-      <form class="w-full px-52 pt-4 ">
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-            First Name
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-        </div>
-        <div class="w-full md:w-1/2 px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-            Last Name
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            E-mail
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-          <p class="text-gray-600 text-xs italic">Some tips - as long as needed</p>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            Message
-          </label>
-          <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-          <p class="text-gray-600 text-xs italic">Re-size can be disabled by set by resize-none / resize-y / resize-x / resize</p>
-        </div>
-      </div>
-      <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
-          <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-            Send
-          </button>
-        </div>
-        <div class="md:w-2/3"></div>
-      </div>
-    </form>
-      </div>
-
-    <!-- info member team -->
-      <div class="infoteam w-full mt-10 border-b-4 border-red-400 p-16" >
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
-        <div class="text-center pb-12">
-            <h2 class="text-4xl font-bold text-indigo-600">
-                Các thành viên trong nhóm tuyệt vời của chúng tôi
-            </h2>
-          
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo">
+              <ul class="all-img-2">
+                <li class="img-item-2">
+                  <img src="./assets/img/product/ars1.jpg" alt="" onclick="changeImg('one')" id="one">
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/img/product/ars2.jpg" alt="" onclick="changeImg('two')" id="two">
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/img/product/ars3.jpg" alt="" onclick="changeImg('three')" id="three"> 
+                </li>
+                <li class="img-item-2">
+                  <img src="./assets/img/product/ars4.jpg" alt="" onclick="changeImg('four')" id="four">
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div class="info-product">
+                <h3 class="product-name">
+                  <a href="" title="">Giày ADIDAS</a>
+                </h3>
+                <div class="status-product">
+                  Trạng thái: <b>Còn hàng</b>
                 </div>
-                <div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
-                    <p class="text-xl text-white font-bold">Hà Huy Hùng</p>
-                    <p class="text-base text-gray-400 font-normal">Back End </p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">I ‘ m a Backend Developer . I ‘ m currently working at Ha Thanh Trade as Frontend Developer ,I love working with data, responding to data and how it works. I use ReactJs && NodeJs Framework for JS to create stunning UI and have a good user experience</p>
-                    <div class="flex justify-start space-x-2">
-                        <a href="https://www.facebook.com/zeroryo25" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/zeroca.photo" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
+                <div class="infor-oder">
+                  Loại sản phẩm: <b>Giày dép</b>
+                </div>
+                <div class="price-product">
+                  <div class="special-price">
+                    <span>540.000đ</span>
+                  </div>
+                  <div class="price-old">
+                    Giá gốc: 
+                    <del>650.000đ</del>
+                    <span class="discount">(-20%)</span>
+                  </div>
+                </div>
+                <div class="product-description">
+                  Đầu tháng /2021, Nike chính thức trình
+                   làng thế hệ tiếp theo của dòng giày đá bóng huyền thoại
+                    thuộc nhà Swoosh là Tiempo Legend 9. Được mệnh danh là
+                     thế hệ nhẹ nhất từ trước đến nay của dòng giày đá bóng Tiempo,
+                      Legend 9 đã có những thay đổi đáng kể
+                       về mặt thiết kế lẫn công nghệ nhằm giúp người chơi có thể tự 
+                       tin và phát huy tối đa khả năng khi chơi bóng.
+                </div>
+                
+              <div class="product__color d-flex" style="align-items: center;">
+                <div class="title" style="font-size: 16px; margin-right: 10px;">
+                  Màu: 
+                </div>
+                <div class="select-swap d-flex">
+                  
+                  <div class="circlecheck">
+                    <input type="radio" id="f-option" class="circle-1" name="selector" checked>
+                    <label for="f-option"></label>
+                    <div class="outer-circle"></div>
+                  </div>
+                  <div class="circlecheck">
+                    <input type="radio" id="g-option" class="circle-2" name="selector">
+                    <label for="g-option"></label>
+                    <div class="outer-circle"></div>
+                  </div>
+                  <div class="circlecheck">
+                    <input type="radio" id="h-option" class="circle-3" name="selector">
+                    <label for="h-option"></label>
+                    <div class="outer-circle"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__size d-flex" style="align-items: center;">
+                <div class="title" style="font-size: 16px; margin-right: 10px;">
+                  Kích thước: 
+                </div>
+                <div class="select-swap">
+                    <div class="swatch-element" data-value="38">
+                      <input type="radio" class="variant-1" id="swatch-1-38" name="mau" value="trung" onclick="check()">
+                      <label for="swatch-1-38" class="sd"><span>38</span></label>
+                    </div>
+                    <div class="swatch-element" data-value="39">
+                      <input type="radio" class="variant-1" id="swatch-1-39" name="mau" value="thanh" onclick="check()">
+                      <label for="swatch-1-39" class="sd"><span>39</span></label>
+                    </div>
+                    <div class="swatch-element" data-value="40" >
+                      <input type="radio" class="variant-1" id="swatch-1-40" name="mau" value="hieu" onclick="check()">
+                      <label for="swatch-1-40" class="sd"><span>40</span></label>
                     </div>
                 </div>
-            </div>
-            <div class="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="photo">
+              </div>
+                <div class="product__wrap">
+                  <div class="product__amount">
+                    <label for="">Số lượng: </label>
+                    <input type="button" value="-" class="control" onclick="tru()">
+                    <input type="text" value="1" class="text-input" id="text_so_luong" onkeypress='validate(event)'> 
+                    <input type="button" value="+" class="control" onclick="cong()">
+                  </div>
                 </div>
-                <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-                    <p class="text-xl text-white font-bold">Lucy Carter</p>
-                    <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="flex justify-start space-x-2">
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-600">
-                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="product__shopnow">
+                  <button class="shopnow2">Mua ngay</button>
                 </div>
+              </div>
             </div>
-         
-          
+          </div>
         </div>
-    </section>
+        <button class="btn-default btn-close" data-dismiss="modal">
+          <i class="fas fa-times-circle"></i>
+        </button>
+        <!-- Modal footer -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div> -->
+        
       </div>
-  
-    <!-- footer -->
-          
-      <section class="">
-        <h1 class="text-center font-bold mt-10 ">
-          Footer icons required Unicons (npm i @iconscout/unicons)
-      </h1>
+    </div>
+  </div>
+  <!-- end modal -->
+</body>
+<script src="./assets/js/main.js"></script>
 
-      <footer class="footerbg-gray-800 pt-10 sm:mt-10 pt-10 bg-gray-600">
-          <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
-              <!-- Col-1 -->
-              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                  <!-- Col Title -->
-                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-                      Getting Started
-                  </div>
-
-                  <!-- Links -->
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Installation
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Release Notes
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Upgrade Guide
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Using with Preprocessors
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Optimizing for Production
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Browser Support
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      IntelliSense
-                  </a>
-              </div>
-
-              <!-- Col-2 -->
-              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                  <!-- Col Title -->
-                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-                      Core Concepts
-                  </div>
-
-                  <!-- Links -->
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Utility-First
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Responsive Design
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Hover, Focus, & Other States
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Dark Mode
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Adding Base Styles
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Extracting Components
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Adding New Utilities
-                  </a>
-              </div>
-
-              <!-- Col-3 -->
-              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                  <!-- Col Title -->
-                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-                      Customization
-                  </div>
-
-                  <!-- Links -->
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Configuration
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Theme Configuration
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Breakpoints
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Customizing Colors
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Customizing Spacing
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Configuring Variants
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Plugins
-                  </a>
-              </div>
-
-              <!-- Col-3 -->
-              <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-                  <!-- Col Title -->
-                  <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-                      Community
-                  </div>
-
-                  <!-- Links -->
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      GitHub
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Discord
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      Twitter
-                  </a>
-                  <a href="#" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
-                      YouTube
-                  </a>
-              </div>
-          </div>
-
-          <!-- Copyright Bar -->
-          <div class="pt-2">
-              <div class="flex pb-5 px-3 m-auto pt-5 
-                  border-t border-gray-500 text-gray-400 text-sm 
-                  flex-col md:flex-row max-w-6xl">
-                  <div class="mt-2">
-                      © Copyright 1998-year. All Rights Reserved.
-                  </div>
-
-                  <!-- Required Unicons (if you want) -->
-                  <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                      <a href="#" class="w-6 mx-1">
-                          <i class="uil uil-facebook-f"></i>
-                      </a>
-                      <a href="#" class="w-6 mx-1">
-                          <i class="uil uil-twitter-alt"></i>
-                      </a>
-                      <a href="#" class="w-6 mx-1">
-                          <i class="uil uil-youtube"></i>
-                      </a>
-                      <a href="#" class="w-6 mx-1">
-                          <i class="uil uil-linkedin"></i>
-                      </a>
-                      <a href="#" class="w-6 mx-1">
-                          <i class="uil uil-instagram"></i>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </footer>
-      </section>
-</div>
-    <!-- cấu hình file  -->
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-    var owl = $('.owl-carousel');
-  owl.owlCarousel({
-    loop:true,
-    nav:true,
-    margin:10,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },            
-        960:{
-            items:3
-        },
-        1200:{
-            items:4
-        }
-    }
-});
-owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
-});
-    </script>
-  </body>
 </html>
